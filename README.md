@@ -5,3 +5,9 @@ We will have static site generation and everything beatiful later on.
 But for now just use the github builtin markdown
 viewer.
 Simply click on the `wiki` folder above to browse a list of all pages.
+
+## Editing
+
+I use [wiki.vim](https://github.com/lervag/wiki.vim)
+but literally any editor will work, including github's webui
+
