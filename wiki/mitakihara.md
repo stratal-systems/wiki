@@ -8,6 +8,7 @@ It is located in Arend's office.
 
 - CPU: Intel Core i7-4800MQ (8) @ 3.70 GHz
 - GPU: NVIDIA Quadro K2100M
+    - This supports CUDA 11 but not CUDA 12
 - MEM: 7GB
 
 ## Software
