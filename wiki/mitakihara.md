@@ -1,7 +1,7 @@
 # Mitakihara
 
-Mitakihara is a GPU server that we use for gateau testing
-and CI.
+Mitakihara is a GPU server that we use for
+[Gateay CI/CD](gateau-cicd.md)
 It is located in Arend's office.
 
 ## Hardware
@@ -22,3 +22,10 @@ It is located in Arend's office.
     - See [CUDA on Void Linux](void-linux-cuda.md) for
         details on how this was set up
 - There are currently no unprivileged users configured, only `root`
+
+## Autosetup
+
+It would be nice to have automatic setup procedure
+so migrating to a different server is easier in the future,
+and because it acts as self-documentaion in a way.
+Maybe ansible? Will have to research this.

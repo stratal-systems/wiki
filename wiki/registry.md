@@ -34,3 +34,8 @@ Image based on `gateau-cuda11` with some enhancements
 for interactive use,
 mainly for maybetree's personal convenience.
 
+### minicycle-rs
+
+Image containing [Minicycle](minicycle.md),
+built from the Dockerfile found on minicycle's github.
+
