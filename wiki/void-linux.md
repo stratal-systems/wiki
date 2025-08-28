@@ -17,14 +17,14 @@ Void Linux is a systemdless Linux distribution.
 
 - List all available services: `ls /etc/sv`
 - List enabled services: `ls /var/service`
-- Enable `ntpd` service: `ln -sf /etc/sv/ntps /var/service`
+- Enable `ntpd` service: `ln -sf /etc/sv/ntpd /var/service`
     - Unlike most other distros,
         this is not done by default when installing
         a package that provides a service.
         You need to do it yourself.
 - Service management: `sv {status|stop|start|restart} <service name>`
 
-The `vsv` command can also provide a nicer graphical to `sv`.
+The `vsv` command can also provide a nicer graphical interface to `sv`.
 With no arguments it lists all managed services.
 To use `vsv`, the `vsv` package needs to be installed.
 
