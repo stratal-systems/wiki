@@ -171,6 +171,7 @@ Minicycle executes the pipeline entrypoint
 (configured per-repo in the `minicycle.toml`,
 `.minicycle/entrypoint` by default)
 from the root of the repo.
+The executable bit must be set and shebang must be present.
 An envrionment variable called `MINICYCLE_ARTIFACTS`
 is set,
 which is an absolute path to the artifacts directory.
