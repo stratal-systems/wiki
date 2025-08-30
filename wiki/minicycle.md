@@ -22,7 +22,7 @@ with git.
 In order to register your pubkey with minicycle,
 you need to add it to the `gpg` trustdb inside minicycle's container.
 Contact maybetree or look in 
-[Gateay CI/CD](gateau-cicd.md) for instructions.
+[Gateau CI/CD](gateau-cicd.md) for instructions.
 
 
 

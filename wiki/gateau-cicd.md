@@ -1,4 +1,4 @@
-# Gateay CI/CD
+# Gateau CI/CD
 
 It was decided by Arend and maybetree
 that to implement continuous integration and deployment for gateau,
