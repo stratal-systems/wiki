@@ -57,10 +57,14 @@ Once the pipeline is completed the report should look like this:
 ```
 
 You can check the output (stdout + stderr) of the pipeline at
+
 <https://mitakihara.webhook.stratal.systems/artifacts/ARTIFACT_NAME/output>
+
 where `ARTIFACT_NAME` is the value of the `artifacts` key in the json.
 So for the above example the path to the captured output would be
-<https://mitakihara.webhook.stratal.systems/artifacts/gateau-1756564880/output>.
+
+<https://mitakihara.webhook.stratal.systems/artifacts/gateau-1756564880/output>
+
 
 ## Debugging
 
@@ -127,4 +131,50 @@ gpg:               imported: 1
 - View logs: `podman log minicycle-rs`
 - Poke around the container: `podman exec -ti minicycle-rs sh`
 
+## Endpoints
+
+## `/hook/<NAME>`
+Receives the json hook from github,
+where `<NAME>` is the title of the repo's table in the `minicycle.toml`
+file.
+
+## `/report-latest`
+Json report of latest pipeline run:
+
+```
+{
+  "artifacts": "gateau-1756564880",
+  "message": "update minicycle pipeline",
+  "ref": "refs/heads/cicdtest",
+  "start": {
+    "time": 1756564880
+  },
+  "finish": {
+    "time": 1756565076,
+    "ok": true
+  }
+}
+```
+
+## `/artficats/<NAME>/output`
+Captured stdout and stderr of pipeline run.
+`<NAME>` is the value of the `artficats` key in the json output.
+The pipeline may also put other files here
+(by `mv`ing them into `$MINICYCLE_ARTIFACTS`),
+but you just have to know what these files are called in
+order to view them,
+because minicycle does not autoindex directories.
+
+## Pipeline environment
+
+Minicycle executes the pipeline entrypoint
+(configured per-repo in the `minicycle.toml`,
+`.minicycle/entrypoint` by default)
+from the root of the repo.
+An envrionment variable called `MINICYCLE_ARTIFACTS`
+is set,
+which is an absolute path to the artifacts directory.
+The pipeline can move files here to make them available
+via the HTTP api
+after the pipeline has finished running (see above).
 
