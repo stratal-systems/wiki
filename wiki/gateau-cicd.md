@@ -156,7 +156,7 @@ Json report of latest pipeline run:
 }
 ```
 
-## `/artficats/<NAME>/output`
+## `/artifacts/<NAME>/output`
 Captured stdout and stderr of pipeline run.
 `<NAME>` is the value of the `artficats` key in the json output.
 The pipeline may also put other files here
